@@ -1,0 +1,159 @@
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "14o-Ql-ghC"; */
+"14o-Ql-ghC.placeholder" = "Username";
+
+/* Class = "UILabel"; text = "User"; ObjectID = "1fS-30-MoG"; */
+"1fS-30-MoG.text" = "User";
+
+/* Class = "UILabel"; text = "Sa"; ObjectID = "3DT-ih-R3J"; */
+"3DT-ih-R3J.text" = "Sa";
+
+/* Class = "UILabel"; text = "Su"; ObjectID = "490-L8-YdW"; */
+"490-L8-YdW.text" = "Su";
+
+/* Class = "UILabel"; text = "Day"; ObjectID = "6wU-dK-v1D"; */
+"6wU-dK-v1D.text" = "Day";
+
+/* Class = "UILabel"; text = "Fr"; ObjectID = "ARo-EW-QZ4"; */
+"ARo-EW-QZ4.text" = "Fr";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "BAS-Ia-0b7"; */
+"BAS-Ia-0b7.placeholder" = "Name";
+
+/* Class = "UITextField"; placeholder = "Repeat Password"; ObjectID = "E32-Xo-aoj"; */
+"E32-Xo-aoj.placeholder" = "Repeat Password";
+
+/* Class = "UIButton"; configuration.title = "Cancel"; ObjectID = "E9G-Am-aeN"; */
+"E9G-Am-aeN.configuration.title" = "Cancel";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "E9G-Am-aeN"; */
+"E9G-Am-aeN.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Repeat Password"; ObjectID = "Fff-Wy-H1H"; */
+"Fff-Wy-H1H.text" = "Repeat Password";
+
+/* Class = "UITextField"; placeholder = "Phone"; ObjectID = "Fhy-Vq-7sx"; */
+"Fhy-Vq-7sx.placeholder" = "Phone";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "Goz-YA-Efo"; */
+"Goz-YA-Efo.placeholder" = "Username";
+
+/* Class = "UILabel"; text = "Mo"; ObjectID = "IFw-Tc-1S3"; */
+"IFw-Tc-1S3.text" = "Mo";
+
+/* Class = "UIViewController"; title = "Add Appointment"; ObjectID = "OKT-Dg-dc0"; */
+"OKT-Dg-dc0.title" = "Add Appointment";
+
+/* Class = "UIViewController"; title = "User"; ObjectID = "OYO-eL-u2N"; */
+"OYO-eL-u2N.title" = "User";
+
+/* Class = "UILabel"; text = "Hour"; ObjectID = "Q00-Vd-D3i"; */
+"Q00-Vd-D3i.text" = "Hour";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "QFV-Ko-gxC"; */
+"QFV-Ko-gxC.text" = "Name";
+
+/* Class = "UIButton"; configuration.title = "Create"; ObjectID = "R5p-Lg-rWu"; */
+"R5p-Lg-rWu.configuration.title" = "Create";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "R5p-Lg-rWu"; */
+"R5p-Lg-rWu.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "We"; ObjectID = "TS5-VE-1GK"; */
+"TS5-VE-1GK.text" = "We";
+
+/* Class = "UIButton"; configuration.title = "Log in"; ObjectID = "Uj7-22-lSZ"; */
+"Uj7-22-lSZ.configuration.title" = "Log in";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Uj7-22-lSZ"; */
+"Uj7-22-lSZ.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "User"; ObjectID = "VFA-UK-y3U"; */
+"VFA-UK-y3U.title" = "User";
+
+/* Class = "UILabel"; text = "Tu"; ObjectID = "WL7-ea-6Ba"; */
+"WL7-ea-6Ba.text" = "Tu";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "Wab-1U-esc"; */
+"Wab-1U-esc.placeholder" = "Email";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "YHy-Cg-fNH"; */
+"YHy-Cg-fNH.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Username"; ObjectID = "ZXA-nK-6Z5"; */
+"ZXA-nK-6Z5.text" = "Username";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "aDN-VF-V5B"; */
+"aDN-VF-V5B.text" = "Phone";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "asq-bp-bo8"; */
+"asq-bp-bo8.text" = "Password";
+
+/* Class = "UIViewController"; title = "Settings"; ObjectID = "bfa-1D-tYs"; */
+"bfa-1D-tYs.title" = "Settings";
+
+/* Class = "UILabel"; text = "Anything"; ObjectID = "cVr-y6-F6I"; */
+"cVr-y6-F6I.text" = "Anything";
+
+/* Class = "UILabel"; text = "Username"; ObjectID = "cqa-32-Uyr"; */
+"cqa-32-Uyr.text" = "Username";
+
+/* Class = "UIViewController"; title = "Add User"; ObjectID = "d33-dX-GRa"; */
+"d33-dX-GRa.title" = "Add User";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "eWP-wn-syB"; */
+"eWP-wn-syB.text" = "Password";
+
+/* Class = "UILabel"; text = "Username"; ObjectID = "f6g-DL-Rht"; */
+"f6g-DL-Rht.text" = "Username";
+
+/* Class = "UILabel"; text = "Who am I?"; ObjectID = "fsI-sm-PmP"; */
+"fsI-sm-PmP.text" = "Who am I?";
+
+/* Class = "UIButton"; configuration.title = "Add Appointment"; ObjectID = "ghp-4v-F4B"; */
+"ghp-4v-F4B.configuration.title" = "Add Appointment";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ghp-4v-F4B"; */
+"ghp-4v-F4B.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "hkM-CC-6ij"; */
+"hkM-CC-6ij.text" = "Name";
+
+/* Class = "UILabel"; text = "Th"; ObjectID = "kYU-an-ggw"; */
+"kYU-an-ggw.text" = "Th";
+
+/* Class = "UIViewController"; title = "List"; ObjectID = "nCU-g5-ZhF"; */
+"nCU-g5-ZhF.title" = "List";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "pV4-t7-h9a"; */
+"pV4-t7-h9a.placeholder" = "Name";
+
+/* Class = "UILabel"; text = "MeetNRun"; ObjectID = "qXC-k9-vbR"; */
+"qXC-k9-vbR.text" = "MeetNRun";
+
+/* Class = "UITabBarItem"; title = "Add Appointment"; ObjectID = "r7B-s5-6gP"; */
+"r7B-s5-6gP.title" = "Add Appointment";
+
+/* Class = "UILabel"; text = "Add Appointment"; ObjectID = "uey-SO-ZpH"; */
+"uey-SO-ZpH.text" = "Add Appointment";
+
+/* Class = "UIViewController"; title = "About Us"; ObjectID = "vbR-Kj-vSI"; */
+"vbR-Kj-vSI.title" = "About Us";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "vxZ-0I-r8Z"; */
+"vxZ-0I-r8Z.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "Sign up as Professional"; ObjectID = "w2H-0o-mgW"; */
+"w2H-0o-mgW.configuration.title" = "Sign up as Professional";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "w2H-0o-mgW"; */
+"w2H-0o-mgW.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "List"; ObjectID = "wRX-x8-6Uq"; */
+"wRX-x8-6Uq.title" = "List";
+
+/* Class = "UILabel"; text = "Available Schedule"; ObjectID = "yt1-zA-xxy"; */
+"yt1-zA-xxy.text" = "Available Schedule";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "zp3-x0-AND"; */
+"zp3-x0-AND.text" = "Email";
