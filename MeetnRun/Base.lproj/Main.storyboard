@@ -165,7 +165,7 @@
         <!--Settings-->
         <scene sceneID="L5x-0U-M7O">
             <objects>
-                <viewController title="Settings" id="bfa-1D-tYs" sceneMemberID="viewController">
+                <viewController title="Settings" hidesBottomBarWhenPushed="YES" id="bfa-1D-tYs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iNQ-is-ROF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -919,7 +919,7 @@
         <!--Add User-->
         <scene sceneID="eX1-jw-igO">
             <objects>
-                <viewController title="Add User" id="d33-dX-GRa" customClass="AddUserController" customModule="MeetnRun" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add User" hidesBottomBarWhenPushed="YES" id="d33-dX-GRa" customClass="AddUserController" customModule="MeetnRun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r20-dh-DSh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
