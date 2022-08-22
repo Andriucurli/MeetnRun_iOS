@@ -9,6 +9,8 @@ import UIKit
 
 class AddUserController: UIViewController {
 
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,5 +27,7 @@ class AddUserController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func clickCreateUser(_ sender: Any) {
+    }
+    
 }

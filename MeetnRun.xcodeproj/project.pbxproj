@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D23AB278289C01370002A2A8 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23AB277289C01370002A2A8 /* NotificationsViewController.swift */; };
+		D27711FD28B39D0400AB61B5 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27711FC28B39D0400AB61B5 /* Checkbox.swift */; };
+		D27711FF28B3B63100AB61B5 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27711FE28B3B63100AB61B5 /* UserDefaultsManager.swift */; };
+		D277120528B3E3F100AB61B5 /* ModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D277120428B3E3F100AB61B5 /* ModelExtensions.swift */; };
+		D277120728B3E56100AB61B5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D277120628B3E56100AB61B5 /* BaseViewController.swift */; };
 		D2797E3F289924C700896D96 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2797E3E289924C700896D96 /* BaseController.swift */; };
 		D2797E412899250300896D96 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2797E402899250300896D96 /* UserController.swift */; };
 		D2797E442899410F00896D96 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2797E432899410F00896D96 /* AlertHandler.swift */; };
@@ -25,10 +30,15 @@
 		D2D3DB0028944943000130D5 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3DAFF28944943000130D5 /* ListController.swift */; };
 		D2D3DB02289449E9000130D5 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3DB01289449E9000130D5 /* UserViewController.swift */; };
 		D2D3DB0428944A62000130D5 /* AddUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3DB0328944A62000130D5 /* AddUserController.swift */; };
-		D2D3DB0D28944EC9000130D5 /* LogoAndréscuadrado.png in Resources */ = {isa = PBXBuildFile; fileRef = D2D3DB0C28944EC9000130D5 /* LogoAndréscuadrado.png */; };
+		D2D3DB0D28944EC9000130D5 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D2D3DB0C28944EC9000130D5 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D23AB277289C01370002A2A8 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		D27711FC28B39D0400AB61B5 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		D27711FE28B3B63100AB61B5 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		D277120428B3E3F100AB61B5 /* ModelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelExtensions.swift; sourceTree = "<group>"; };
+		D277120628B3E56100AB61B5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D2797E3E289924C700896D96 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		D2797E402899250300896D96 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		D2797E432899410F00896D96 /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
@@ -50,7 +60,7 @@
 		D2D3DAFF28944943000130D5 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		D2D3DB01289449E9000130D5 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		D2D3DB0328944A62000130D5 /* AddUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserController.swift; sourceTree = "<group>"; };
-		D2D3DB0C28944EC9000130D5 /* LogoAndréscuadrado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LogoAndréscuadrado.png"; sourceTree = "<group>"; };
+		D2D3DB0C28944EC9000130D5 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +84,8 @@
 				D2D3DB01289449E9000130D5 /* UserViewController.swift */,
 				D2D3DAFD2894481F000130D5 /* AddAppointmentController.swift */,
 				D2D3DAF62894457A000130D5 /* SignProfessionalController.swift */,
+				D23AB277289C01370002A2A8 /* NotificationsViewController.swift */,
+				D277120628B3E56100AB61B5 /* BaseViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -82,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				D2797E432899410F00896D96 /* AlertHandler.swift */,
+				D27711FC28B39D0400AB61B5 /* Checkbox.swift */,
+				D27711FE28B3B63100AB61B5 /* UserDefaultsManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -91,7 +105,7 @@
 			children = (
 				D2797E7D2899DFE100896D96 /* Media.xcassets */,
 				D2797E482899897000896D96 /* FotoAndres.JPG */,
-				D2D3DB0C28944EC9000130D5 /* LogoAndréscuadrado.png */,
+				D2D3DB0C28944EC9000130D5 /* logo.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -143,6 +157,7 @@
 		D2D3DB0528944BA6000130D5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D277120428B3E3F100AB61B5 /* ModelExtensions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -206,7 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2D3DB0D28944EC9000130D5 /* LogoAndréscuadrado.png in Resources */,
+				D2D3DB0D28944EC9000130D5 /* logo.png in Resources */,
 				D2D3DAED289442B7000130D5 /* LaunchScreen.storyboard in Resources */,
 				D2797E492899897100896D96 /* FotoAndres.JPG in Resources */,
 				D2D3DAEA289442B7000130D5 /* Assets.xcassets in Resources */,
@@ -227,6 +242,10 @@
 				D2D3DADE289442B5000130D5 /* AppDelegate.swift in Sources */,
 				D2D3DB0028944943000130D5 /* ListController.swift in Sources */,
 				D2D3DAFE2894481F000130D5 /* AddAppointmentController.swift in Sources */,
+				D277120728B3E56100AB61B5 /* BaseViewController.swift in Sources */,
+				D277120528B3E3F100AB61B5 /* ModelExtensions.swift in Sources */,
+				D23AB278289C01370002A2A8 /* NotificationsViewController.swift in Sources */,
+				D27711FF28B3B63100AB61B5 /* UserDefaultsManager.swift in Sources */,
 				D2D3DAE0289442B5000130D5 /* SceneDelegate.swift in Sources */,
 				D2797E412899250300896D96 /* UserController.swift in Sources */,
 				D2D3DAF72894457A000130D5 /* SignProfessionalController.swift in Sources */,
@@ -235,6 +254,7 @@
 				D2797E3F289924C700896D96 /* BaseController.swift in Sources */,
 				D2797E442899410F00896D96 /* AlertHandler.swift in Sources */,
 				D2D3DAFC28944746000130D5 /* HomeTabController.swift in Sources */,
+				D27711FD28B39D0400AB61B5 /* Checkbox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

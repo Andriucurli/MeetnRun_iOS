@@ -44,7 +44,12 @@ class SignProfessionalController: UIViewController {
         
         let uc = UserController()
         
-        uc.createUser(username, name, password)
+        if uc.createProfessional(username, name, password){
+            self.dismiss(animated: true)
+        } else {
+            let alert = AlertHandler.getErrorCannotCreateUser()
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     

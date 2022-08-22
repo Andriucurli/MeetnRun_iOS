@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21G72" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Appointment" representedClassName="Appointment" syncable="YES" codeGenerationType="class">
         <attribute name="day" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="hour" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="status" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="professional_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User"/>
-        <relationship name="user_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User"/>
+        <relationship name="professional" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User"/>
     </entity>
     <entity name="Notification" representedClassName="Notification" syncable="YES" codeGenerationType="class">
         <attribute name="message" optional="YES" attributeType="String"/>
         <attribute name="seen" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="appointment_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Appointment"/>
-        <relationship name="receiver_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User"/>
-        <relationship name="sender_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User"/>
+        <relationship name="appointment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Appointment"/>
+        <relationship name="receiver" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User"/>
+        <relationship name="sender" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
         <attribute name="email" optional="YES" attributeType="String"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="password" attributeType="String"/>
         <attribute name="phone" optional="YES" attributeType="String"/>
         <attribute name="photo" optional="YES" attributeType="Binary"/>
         <attribute name="schedule" optional="YES" attributeType="Binary"/>
-        <attribute name="username" optional="YES" attributeType="String"/>
-        <relationship name="professional_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User"/>
+        <attribute name="username" attributeType="String"/>
+        <relationship name="professional" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User"/>
     </entity>
     <elements>
-        <element name="User" positionX="-34.738525390625" positionY="-113.3629760742188" width="128" height="163"/>
-        <element name="Appointment" positionX="25.8623046875" positionY="279.0408325195312" width="128" height="118"/>
-        <element name="Notification" positionX="207.78271484375" positionY="30.29788208007812" width="128" height="133"/>
+        <element name="Appointment" positionX="25.8623046875" positionY="279.0408325195312" width="128" height="104"/>
+        <element name="Notification" positionX="207.78271484375" positionY="30.29788208007812" width="128" height="119"/>
+        <element name="User" positionX="-34.738525390625" positionY="-113.3629760742188" width="128" height="149"/>
     </elements>
 </model>

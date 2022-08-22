@@ -10,7 +10,63 @@ import CoreData
 
 class UserController: BaseController {
     
-    func createUser (_ username : String, _ name : String, _ password : String) -> Bool {
+    
+    
+    public func editUserPhoto(user : User, photoData : Data?){
+        guard let appDelegate =
+                UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+          
+          // 1
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        
+        user.photo = photoData
+        
+        do {
+            try managedContext.save()
+          } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+          }
+    }
+    
+    public func editUser(user : User, _ name : String?, _ phone : String?, _ email : String?){
+        guard let appDelegate =
+                UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+          
+          // 1
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        
+        user.name = name
+        user.phone = phone
+        user.email = email
+        
+        do {
+            try managedContext.save()
+          } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+          }
+    }
+    
+    public func createProfessional(_ username : String, _ name : String, _ password : String) -> Bool{
+        return createUser(username, name, password, email: nil, professional: nil)
+    }
+    
+    public func createPacient(_ username : String, _ email : String, professional : User) -> Bool{
+        return createUser(username, username, username, email: email, professional: professional)
+    }
+    
+    private func createUser (_ username : String, _ name : String, _ password : String, email : String?, professional : User?) -> Bool {
+        
+        let existingUser = getUser(username)
+        
+        if existingUser != nil {
+            return false
+        }
         
         guard let appDelegate =
                 UIApplication.shared.delegate as? AppDelegate else {
@@ -21,26 +77,55 @@ class UserController: BaseController {
         let managedContext =
             appDelegate.persistentContainer.viewContext
           
-          // 2
-        let entity =
-            NSEntityDescription.entity(forEntityName: "User",
-                                       in: managedContext)!
           
-        let user = NSManagedObject(entity: entity,
-                                       insertInto: managedContext)
-          
-          // 3
-        user.setValue(username, forKeyPath: "username")
-        user.setValue(name, forKey: "name")
-        user.setValue(password, forKey: "password")
-          // 4
+        let user = User(context: managedContext)
+        user.username = username
+        user.name = name
+        user.password = password
+        user.email = email
+        user.professional = professional
+        
         do {
             try managedContext.save()
           } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
+              return false
           }
         
         return true
+    }
+    
+    
+    func getUser(_ username : String) -> User?{
+        
+        var users : [User] = []
+        
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+              return nil
+          }
+          
+          let managedContext =
+            appDelegate.persistentContainer.viewContext
+          
+          //2
+          let fetchRequest =
+            NSFetchRequest<User>(entityName: "User")
+        
+        fetchRequest.predicate = NSPredicate(format: "username == %@", username)
+          
+          //3
+          do {
+            users = try managedContext.fetch(fetchRequest)
+          } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+          }
+        
+        if users.count != 1 {
+            return nil
+        } else {
+            return users.first
+        }
     }
 
 }

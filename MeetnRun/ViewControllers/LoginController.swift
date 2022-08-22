@@ -9,6 +9,8 @@ import UIKit
 
 class LoginController: UIViewController {
 
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -25,13 +27,38 @@ class LoginController: UIViewController {
     }
     
     @IBAction func clickLogin(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondVC = storyboard.instantiateViewController(identifier: "HomeNavController")
         
-        secondVC.modalPresentationStyle = .fullScreen
-        secondVC.modalTransitionStyle = .crossDissolve
-        
-        present(secondVC, animated: true, completion: nil)
+        if !usernameTextField.hasText || !passwordTextField.hasText {
+            let alert = AlertHandler.getWarningEmptyFields()
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            
+            let uc = UserController()
+            let username = usernameTextField.text!
+            
+            guard let expectedUser = uc.getUser(username) else {
+                let alert = AlertHandler.getErrorIncorrectUsernamePassword()
+                self.present(alert, animated: true, completion: nil)
+                return
+            }
+            
+            let password = passwordTextField.text!
+            if expectedUser.password != password {
+                let alert = AlertHandler.getErrorIncorrectUsernamePassword()
+                self.present(alert, animated: true, completion: nil)
+                return
+            }
+            
+            UserDefaultsManager.login(expectedUser.username!)
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let secondVC = storyboard.instantiateViewController(identifier: "HomeNavController")
+            
+            secondVC.modalPresentationStyle = .fullScreen
+            secondVC.modalTransitionStyle = .crossDissolve
+            
+            present(secondVC, animated: true, completion: nil)
+        }
     }
 }
 
