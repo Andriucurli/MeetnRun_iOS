@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddUserController: UIViewController {
+class AddUserController: BaseViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -28,6 +28,18 @@ class AddUserController: UIViewController {
     }
     */
     @IBAction func clickCreateUser(_ sender: Any) {
+        if !usernameTextField.hasText ||
+            !emailTextField.hasText {
+            let alert = AlertHandler.getWarningEmptyFields()
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            if (uc.createPacient(usernameTextField.text!, emailTextField.text!, professional: self.user)){
+                self.dismiss(animated: true)
+            } else {
+                let alert = AlertHandler.getErrorCannotCreateUser()
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
     }
     
 }

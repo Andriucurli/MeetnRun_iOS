@@ -7,13 +7,70 @@
 
 import UIKit
 
-class UserViewController: BaseViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+protocol PHourSetter {
+    func setHour(hour : Int, day : Int, value : Bool)
+}
+
+class UIScheduleCell : UITableViewCell {
+    
+    @IBOutlet weak var hourLabel: UILabel!
+    @IBOutlet weak var mondayCheck: UIButton!
+    @IBOutlet weak var tuesdayCheck: UIButton!
+    @IBOutlet weak var wednesdayCheck: UIButton!
+    @IBOutlet weak var thursdayCheck: UIButton!
+    @IBOutlet weak var fridayCheck: UIButton!
+    @IBOutlet weak var saturdayCheck: UIButton!
+    @IBOutlet weak var sundayCheck: UIButton!
+    
+    var hour : Int = 0
+    
+    var hourSetter : PHourSetter!
+    
+    @IBAction func changeHourValue(_ sender : Any){
+        let actionButton = sender as! Checkbox
+        hourSetter.setHour(hour: self.hour, day: actionButton.tag, value: actionButton.isChecked)
+    }
+    
+}
+
+class UserViewController: BaseViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate, PHourSetter {
+    func setHour(hour: Int, day: Int, value : Bool) {
+        print(hour)
+        print(day)
+        print(value)
+    }
+    
+
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 24
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! UIScheduleCell
+        cell.hourLabel.text = String(format: "%02d:00", indexPath.row)
+        cell.hour = indexPath.row
+        cell.hourSetter = self
+        return cell
+    }
+    
+    
+    
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
+    
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var scheduleTableView: UITableView!
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
@@ -35,6 +92,12 @@ class UserViewController: BaseViewController, UITextFieldDelegate, UIImagePicker
         emailTextField.delegate = self
         phoneTextField.delegate = self
         
+        if !user.isProfessional(){
+            self.navigationItem.setRightBarButton(nil, animated: false)
+        }
+        
+        scheduleTableView.dataSource = self
+        scheduleTableView.delegate = self
     }
     
     @IBAction func clickAddPhoto(_ sender: Any) {

@@ -22,4 +22,20 @@ class UserDefaultsManager: NSObject {
     static func getUsername() -> String?{
         return UserDefaults.standard.string(forKey: "logged_username")
     }
+    
+    static func setConfigValues(notificationsEnabled : Bool, createEventsAuto : Bool){
+        UserDefaults.standard.set(notificationsEnabled, forKey: "notificationsEnabled")
+        UserDefaults.standard.set(createEventsAuto, forKey: "createRecordatoriesAuto")
+        UserDefaults.standard.synchronize()
+    }
+    
+    static func getNotificationsEnabled() -> Bool {
+        return UserDefaults.standard.bool(forKey: "notificationsEnabled")
+    }
+    
+    static func getCreateRecordatoriesAuto()-> Bool {
+        return UserDefaults.standard.bool(forKey: "createRecordatoriesAuto")
+    }
+    
+    
 }

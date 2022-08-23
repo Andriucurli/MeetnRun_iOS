@@ -8,8 +8,7 @@
 import UIKit
 import CoreData
 
-class UserController: BaseController {
-    
+class UserController {
     
     
     public func editUserPhoto(user : User, photoData : Data?){
@@ -126,6 +125,33 @@ class UserController: BaseController {
         } else {
             return users.first
         }
+    }
+    
+    func getPacients(professional : User) -> [User]? {
+        var users : [User] = []
+        
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+              return nil
+          }
+          
+          let managedContext =
+            appDelegate.persistentContainer.viewContext
+          
+          //2
+          let fetchRequest =
+            NSFetchRequest<User>(entityName: "User")
+        
+        fetchRequest.predicate = NSPredicate(format: "professional = %@", professional)
+          
+          //3
+          do {
+            users = try managedContext.fetch(fetchRequest)
+          } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+          }
+        
+        return users
     }
 
 }

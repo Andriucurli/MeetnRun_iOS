@@ -23,11 +23,12 @@
         <attribute name="photo" optional="YES" attributeType="Binary"/>
         <attribute name="schedule" optional="YES" attributeType="Binary"/>
         <attribute name="username" attributeType="String"/>
-        <relationship name="professional" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User"/>
+        <relationship name="pacient" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="professional" inverseEntity="User"/>
+        <relationship name="professional" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="pacient" inverseEntity="User"/>
     </entity>
     <elements>
         <element name="Appointment" positionX="25.8623046875" positionY="279.0408325195312" width="128" height="104"/>
         <element name="Notification" positionX="207.78271484375" positionY="30.29788208007812" width="128" height="119"/>
-        <element name="User" positionX="-34.738525390625" positionY="-113.3629760742188" width="128" height="149"/>
+        <element name="User" positionX="-34.738525390625" positionY="-113.3629760742188" width="128" height="164"/>
     </elements>
 </model>

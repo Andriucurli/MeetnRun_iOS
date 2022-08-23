@@ -12,11 +12,11 @@
 		D27711FF28B3B63100AB61B5 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27711FE28B3B63100AB61B5 /* UserDefaultsManager.swift */; };
 		D277120528B3E3F100AB61B5 /* ModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D277120428B3E3F100AB61B5 /* ModelExtensions.swift */; };
 		D277120728B3E56100AB61B5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D277120628B3E56100AB61B5 /* BaseViewController.swift */; };
-		D2797E3F289924C700896D96 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2797E3E289924C700896D96 /* BaseController.swift */; };
 		D2797E412899250300896D96 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2797E402899250300896D96 /* UserController.swift */; };
 		D2797E442899410F00896D96 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2797E432899410F00896D96 /* AlertHandler.swift */; };
 		D2797E492899897100896D96 /* FotoAndres.JPG in Resources */ = {isa = PBXBuildFile; fileRef = D2797E482899897000896D96 /* FotoAndres.JPG */; };
 		D2797E7E2899DFE100896D96 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2797E7D2899DFE100896D96 /* Media.xcassets */; };
+		D2B03A7D28B5262200D2E463 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B03A7C28B5262200D2E463 /* SettingsController.swift */; };
 		D2D3DADE289442B5000130D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3DADD289442B5000130D5 /* AppDelegate.swift */; };
 		D2D3DAE0289442B5000130D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3DADF289442B5000130D5 /* SceneDelegate.swift */; };
 		D2D3DAE2289442B5000130D5 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3DAE1289442B5000130D5 /* LoginController.swift */; };
@@ -39,12 +39,11 @@
 		D27711FE28B3B63100AB61B5 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		D277120428B3E3F100AB61B5 /* ModelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelExtensions.swift; sourceTree = "<group>"; };
 		D277120628B3E56100AB61B5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		D2797E3E289924C700896D96 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		D2797E402899250300896D96 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		D2797E432899410F00896D96 /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 		D2797E482899897000896D96 /* FotoAndres.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FotoAndres.JPG; sourceTree = "<group>"; };
-		D2797E4A28998BAC00896D96 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		D2797E7D2899DFE100896D96 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		D2B03A7C28B5262200D2E463 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		D2D3DADA289442B5000130D5 /* MeetnRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetnRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D3DADD289442B5000130D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2D3DADF289442B5000130D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +85,7 @@
 				D2D3DAF62894457A000130D5 /* SignProfessionalController.swift */,
 				D23AB277289C01370002A2A8 /* NotificationsViewController.swift */,
 				D277120628B3E56100AB61B5 /* BaseViewController.swift */,
+				D2B03A7C28B5262200D2E463 /* SettingsController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -148,7 +148,6 @@
 		D2D3DAFA28944694000130D5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D2797E3E289924C700896D96 /* BaseController.swift */,
 				D2797E402899250300896D96 /* UserController.swift */,
 			);
 			path = Controllers;
@@ -237,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2B03A7D28B5262200D2E463 /* SettingsController.swift in Sources */,
 				D2D3DB02289449E9000130D5 /* UserViewController.swift in Sources */,
 				D2D3DAE2289442B5000130D5 /* LoginController.swift in Sources */,
 				D2D3DADE289442B5000130D5 /* AppDelegate.swift in Sources */,
@@ -251,7 +251,6 @@
 				D2D3DAF72894457A000130D5 /* SignProfessionalController.swift in Sources */,
 				D2D3DAE8289442B5000130D5 /* MeetnRun.xcdatamodeld in Sources */,
 				D2D3DB0428944A62000130D5 /* AddUserController.swift in Sources */,
-				D2797E3F289924C700896D96 /* BaseController.swift in Sources */,
 				D2797E442899410F00896D96 /* AlertHandler.swift in Sources */,
 				D2D3DAFC28944746000130D5 /* HomeTabController.swift in Sources */,
 				D27711FD28B39D0400AB61B5 /* Checkbox.swift in Sources */,
@@ -265,7 +264,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				D2D3DAE4289442B5000130D5 /* Base */,
-				D2797E4A28998BAC00896D96 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
