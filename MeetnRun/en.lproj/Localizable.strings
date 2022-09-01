@@ -1,0 +1,55 @@
+/* 
+  Localizable.strings
+  MeetnRun
+
+  Created by ALugo on 1/9/22.
+  
+*/
+"CANCEL" = "Cancel";
+"DELETE" = "Delete";
+"DONE" = "Done";
+"PACIENTS" = "Pacients";
+"CAMERA" = "Camera";
+"ALBUM_ROLL" = "Album roll";
+"WARNING" = "Warning";
+
+"MONDAY" = "Monday";
+"TUESDAY" = "Tuesday";
+"WEDNESDAY" = "Wednesday";
+"THURSDAY" = "Thursday";
+"FRIDAY" = "Friday";
+"SATURDAY" = "Saturday";
+"SUNDAY" = "Sunday";
+//ModelExtensions
+"MESSAGE_TYPE_CREATED" = "An appointment with %@ has been created";
+"MESSAGE_TYPE_NEED_CONFIRMATION" = "An appointment with %@ has been requested";
+"MESSAGE_TYPE_CONFIRMED" = "An appointment with %@ has been confirmed";
+"MESSAGE_TYPE_NEED_MODIFICATION" = "%@ has requested a modification of the appointment";
+"MESSAGE_TYPE_MODIFIED" = "The appointment with %@ has been modified";
+"MESSAGE_TYPE_CANCELLED" = "An appointment with %@ was cancelled";
+// AppointmentViewController
+"ALERT_TITLE_CANCELAPPOINTMENT" = "Cancel Appointment";
+"ALERT_MESSAGE_CANCELAPPOINTMENT" = "Do you really want to cancel this appointment?";
+"ALERT_TITLE_MODIFYAPPOINTMENT" = "Choose new schedule";
+"ALERT_MESSAGE_MODIFYAPPOINTMENT" = "Choose another time to reschedule your appointment.";
+"EVENT_TITLE" = "Appointment with %@";
+//NotificationsViewController
+"TEXT_BACKGROUND_NONOTIFICATIONS" = "No Unseen Notifications";
+//UserViewController
+"TITLE_PHOTO_MENU" = "Photo Source";
+"MESSAGE_PHOTO_MENU" = "Select an option";
+//ListController
+"TEXT_BACKGROUND_NOAPPOINTMENTS" = "No Active Appointments";
+//HomeTabController
+"NOTIFICATION_TITLE" = "Check your notifications";
+"NOTIFICATION_BODY" = "It looks like there are new unseen ones";
+//AlertHandler
+"MESSAGE_WARNING_EMPTYFIELDS" = "Some fields are empty. Please, check the provided info or try it later.";
+"MESSAGE_ERROR_PASSWORDNOTEQUALS" = "The passwords are not the same.";
+"MESSAGE_ERROR_INCORRECTUSERNAMEPASSWORD" = "Incorrect username or password";
+"MESSAGE_ERROR_CANNOTCREATEUSER" = "Cannot create user. Check the fields or try later";
+"MESSAGE_ERROR_CANNOTCREATEAPPOINTMENT" = "Cannot create appointment. Check the fields or try later";
+"MESSAGE_INFO_APPOINTMENTCREATED" = "Appointment created!";
+"MESSAGE_INFO_APPOINTMENTREQUESTED" = "Appointment requested!";
+"MESSAGE_WARNING_NOPHONEAVAILABLE" = "The call is unavailable because the number is not registered for this user or the call functionality is not available in your device.";
+"MESSAGE_WARNING_NOMAILAVAILABLE" = "The email is unavailable because the email address is not registered for this user.";

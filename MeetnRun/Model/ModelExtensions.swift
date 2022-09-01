@@ -40,22 +40,22 @@ extension Notification {
         var formatString = ""
         switch type {
         case .CREATED:
-            formatString = "An appointment with %@ has been created"
+            formatString = NSLocalizedString("MESSAGE_TYPE_CREATED", comment: "message for created type")
             break
         case .NEED_CONFIRMATION:
-            formatString = "An appointment with %@ has been requested"
+            formatString = NSLocalizedString("MESSAGE_TYPE_NEED_CONFIRMATION", comment: "message for need_confirmation type")
             break
         case .CONFIRMED:
-            formatString = "An appointment with %@ has been confirmed"
+            formatString = NSLocalizedString("MESSAGE_TYPE_CONFIRMED", comment: "message for confirmed type")
             break
         case .NEED_MODIFICATION:
-            formatString = "%@ has requested a modification of the appointment"
+            formatString = NSLocalizedString("MESSAGE_TYPE_NEED_MODIFICATION", comment: "message for need_modification type")
             break
         case .MODIFIED:
-            formatString = "The appointment with %@ has been modified"
+            formatString = NSLocalizedString("MESSAGE_TYPE_MODIFIED", comment: "message for modified type")
             break
         case .CANCELLED:
-            formatString = "An appointment with %@ was cancelled"
+            formatString = NSLocalizedString("MESSAGE_TYPE_CANCELLED", comment: "message for cancelled type")
             break
         }
         

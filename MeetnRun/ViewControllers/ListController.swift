@@ -49,11 +49,13 @@ class ListController: BaseViewController, UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if appointments.count == 0 {
             let emptyLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
-                emptyLabel.text = "No Active Appointments"
+                emptyLabel.text = NSLocalizedString("TEXT_BACKGROUND_NOAPPOINTMENTS", comment: "Text for the background when there is no appointments")
             emptyLabel.textAlignment = NSTextAlignment.center
                 appointmentTableView.backgroundView = emptyLabel
             appointmentTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-            }
+        } else {
+            appointmentTableView.backgroundView = nil
+        }
         return appointments.count
     }
     

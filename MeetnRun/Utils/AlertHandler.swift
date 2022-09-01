@@ -10,63 +10,63 @@ import UIKit
  class AlertHandler: NSObject {
 
      static func getWarningEmptyFields() -> UIAlertController {
-         let alertView = UIAlertController(title: "Warning", message: "Some fields are empty. Please, check the provided info or try it later.", preferredStyle: .alert)
+         let alertView = UIAlertController(title: NSLocalizedString("WARNING", comment: "warning"), message: NSLocalizedString("MESSAGE_WARNING_EMPTYFIELDS", comment: "Message of warning for empty fields"), preferredStyle: .alert)
          alertView.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
          
          return alertView
      }
      
      static func getErrorPasswordsNotEquals() -> UIAlertController {
-         let alertView = UIAlertController(title: "Error", message: "The passwords are not the same.", preferredStyle: .alert)
+         let alertView = UIAlertController(title: "Error", message: NSLocalizedString("MESSAGE_ERROR_PASSWORDNOTEQUALS", comment: "message of error for password not equals"), preferredStyle: .alert)
          alertView.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
          
          return alertView
      }
      
      static func getErrorIncorrectUsernamePassword() -> UIAlertController {
-         let alertView = UIAlertController(title: "Error", message: "Incorrect username or password", preferredStyle: .alert)
+         let alertView = UIAlertController(title: "Error", message: NSLocalizedString("MESSAGE_ERROR_INCORRECTUSERNAMEPASSWORD", comment: "message of error in username or password"), preferredStyle: .alert)
          alertView.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
          
          return alertView
      }
      
      static func getErrorCannotCreateUser() -> UIAlertController {
-         let alertView = UIAlertController(title: "Error", message: "Cannot create user. Check the fields or try later", preferredStyle: .alert)
+         let alertView = UIAlertController(title: "Error", message: NSLocalizedString("MESSAGE_ERROR_CANNOTCREATEUSER", comment: "error message in user  creation"), preferredStyle: .alert)
          alertView.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
          
          return alertView
      }
      
      static func getErrorCannotCreateAppointment() -> UIAlertController {
-         let alertView = UIAlertController(title: "Error", message: "Cannot create appointment. Check the fields or try later", preferredStyle: .alert)
+         let alertView = UIAlertController(title: "Error", message: NSLocalizedString("MESSAGE_ERROR_CANNOTCREATEAPPOINTMENT", comment: "error message in appointment creation"), preferredStyle: .alert)
          alertView.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
          
          return alertView
      }
      
      static func getInfoAppointmentCreated() -> UIAlertController {
-         let alertView = UIAlertController(title: "Info", message: "Appointment created!", preferredStyle: .alert)
+         let alertView = UIAlertController(title: "Info", message: NSLocalizedString("MESSAGE_INFO_APPOINTMENTCREATED", comment: "Info message in appointment creation"), preferredStyle: .alert)
          alertView.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
          
          return alertView
      }
      
      static func getInfoAppointmentRequested() -> UIAlertController {
-         let alertView = UIAlertController(title: "Info", message: "Appointment requested!", preferredStyle: .alert)
+         let alertView = UIAlertController(title: "Info", message: NSLocalizedString("MESSAGE_INFO_APPOINTMENTREQUESTED", comment: "info message in appointment request"), preferredStyle: .alert)
          alertView.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
          
          return alertView
      }
      
      static func getWarningNoPhoneAvailable() -> UIAlertController {
-         let alertView = UIAlertController(title: "Warning", message: "The call is unavailable because the number is not registered for this user or the call functionality is not available in your device.", preferredStyle: .alert)
+         let alertView = UIAlertController(title: NSLocalizedString("WARNING", comment: "warning"), message: NSLocalizedString("MESSAGE_WARNING_NOPHONEAVAILABLE", comment: "warning message for no phone available"), preferredStyle: .alert)
          alertView.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
          
          return alertView
      }
      
      static func getWarningNoMailAvailable() -> UIAlertController {
-         let alertView = UIAlertController(title: "Warning", message: "The email is unavailable because the email address is not registered for this user.", preferredStyle: .alert)
+         let alertView = UIAlertController(title: NSLocalizedString("WARNING", comment: "warning"), message: NSLocalizedString("MESSAGE_WARNING_NOMAILAVAILABLE", comment: "warning message for mail generation"), preferredStyle: .alert)
          alertView.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
          
          return alertView

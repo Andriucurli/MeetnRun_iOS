@@ -52,7 +52,7 @@ class AddAppointmentController: BaseViewController, UIPickerViewDelegate, UIPick
         super.viewWillAppear(animated)
         
         if (user.isProfessional()){
-            anythingLabel.text = "Pacients"
+            anythingLabel.text = NSLocalizedString("PACIENTS", comment: "pacients")
             pacients = uc?.getPacients(professional: user)
             anythingPicker.isUserInteractionEnabled = true
             
@@ -62,7 +62,7 @@ class AddAppointmentController: BaseViewController, UIPickerViewDelegate, UIPick
             dayPickerView.isUserInteractionEnabled = true
         }
         
-        hourPickerVC = HourPickerViewController(schedule: user.schedule ?? user.professional!.schedule!, setter: self)
+        hourPickerVC = HourPickerViewController(user: self.user, schedule: user.schedule ?? user.professional!.schedule!, setter: self)
         hourPickerView.delegate = hourPickerVC
         hourPickerView.dataSource = hourPickerVC
         
@@ -121,7 +121,7 @@ class AddAppointmentController: BaseViewController, UIPickerViewDelegate, UIPick
                             DispatchQueue.main.async {
                                 if (granted) && (error == nil) {
                                     let event = EKEvent(eventStore: self.eventStore)
-                                    event.title = String(format: "Appointment with %@", appointment!.user!.name!)
+                                    event.title = String(format: NSLocalizedString("TITLE_EVENT", comment: "Title for the event"), appointment!.user!.name!)
                                     event.startDate = firstDate
                                     event.recurrenceRules = [recurrenceRule]
                                     event.endDate = firstDate.addingTimeInterval(60*60)
@@ -217,10 +217,14 @@ class HourPickerViewController : NSObject, UIPickerViewDelegate, UIPickerViewDat
     var day : Int!
     var hours : [String] = []
     let setter : AppointmentHourSetter
+    let ac : AppointmentController
+    let user : User
     
-    init(schedule : Data, setter : AppointmentHourSetter){
+    init(user : User, schedule : Data, setter : AppointmentHourSetter){
+        self.user = user
         self.schedule = schedule
         self.setter = setter
+        ac = AppointmentController()!
     }
     
     
@@ -236,7 +240,7 @@ class HourPickerViewController : NSObject, UIPickerViewDelegate, UIPickerViewDat
                 let bytei = hour/8
                 let segmentByte = schedule[day * 3 + bytei]
                 let biti = hour%8
-                if Utils.isBitSet(b: segmentByte, bit: 7-biti){
+                if Utils.isBitSet(b: segmentByte, bit: 7-biti) && ac.checkAppointment(user: self.user, day: self.day, hour: hour){
                     hours.append(String(format: "%02d:00", hour))
                     count = count + 1
                 }

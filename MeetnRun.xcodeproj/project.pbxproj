@@ -22,6 +22,7 @@
 		D2BA0B8928B6456E003D3AB9 /* AppointmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA0B8828B6456E003D3AB9 /* AppointmentController.swift */; };
 		D2BA0B8B28B64588003D3AB9 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA0B8A28B64588003D3AB9 /* NotificationController.swift */; };
 		D2BA0B8D28B83A82003D3AB9 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA0B8C28B83A82003D3AB9 /* BaseController.swift */; };
+		D2CEC9E728C0C66D008ABD00 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2CEC9E928C0C66D008ABD00 /* Localizable.strings */; };
 		D2D3DADE289442B5000130D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3DADD289442B5000130D5 /* AppDelegate.swift */; };
 		D2D3DAE0289442B5000130D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3DADF289442B5000130D5 /* SceneDelegate.swift */; };
 		D2D3DAE2289442B5000130D5 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D3DAE1289442B5000130D5 /* LoginController.swift */; };
@@ -50,11 +51,15 @@
 		D2797E432899410F00896D96 /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 		D2797E482899897000896D96 /* FotoAndres.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FotoAndres.JPG; sourceTree = "<group>"; };
 		D2797E7D2899DFE100896D96 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		D27B988328C0D55B0047358F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
 		D2B03A7C28B5262200D2E463 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		D2BA0B8628B62473003D3AB9 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		D2BA0B8828B6456E003D3AB9 /* AppointmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentController.swift; sourceTree = "<group>"; };
 		D2BA0B8A28B64588003D3AB9 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		D2BA0B8C28B83A82003D3AB9 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		D2CEC9DF28C0C28E008ABD00 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		D2CEC9EA28C0C672008ABD00 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D2CEC9EB28C0C6AA008ABD00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D2D3DADA289442B5000130D5 /* MeetnRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetnRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D3DADD289442B5000130D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2D3DADF289442B5000130D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,7 +68,6 @@
 		D2D3DAE7289442B5000130D5 /* MeetnRun.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MeetnRun.xcdatamodel; sourceTree = "<group>"; };
 		D2D3DAE9289442B7000130D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2D3DAEC289442B7000130D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D2D3DAEE289442B7000130D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2D3DAF62894457A000130D5 /* SignProfessionalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignProfessionalController.swift; sourceTree = "<group>"; };
 		D2D3DAFB28944746000130D5 /* HomeTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabController.swift; sourceTree = "<group>"; };
 		D2D3DAFD2894481F000130D5 /* AddAppointmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppointmentController.swift; sourceTree = "<group>"; };
@@ -161,8 +165,9 @@
 				D2D3DAE3289442B5000130D5 /* Main.storyboard */,
 				D2D3DAE9289442B7000130D5 /* Assets.xcassets */,
 				D2D3DAEB289442B7000130D5 /* LaunchScreen.storyboard */,
-				D2D3DAEE289442B7000130D5 /* Info.plist */,
+				D27B988028C0CD680047358F /* Info.plist */,
 				D2D3DAE6289442B5000130D5 /* MeetnRun.xcdatamodeld */,
+				D2CEC9E928C0C66D008ABD00 /* Localizable.strings */,
 			);
 			path = MeetnRun;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 				D2D3DB0D28944EC9000130D5 /* logo.png in Resources */,
 				D2D3DAED289442B7000130D5 /* LaunchScreen.storyboard in Resources */,
 				D2797E492899897100896D96 /* FotoAndres.JPG in Resources */,
+				D2CEC9E728C0C66D008ABD00 /* Localizable.strings in Resources */,
 				D2D3DAEA289442B7000130D5 /* Assets.xcassets in Resources */,
 				D2797E7E2899DFE100896D96 /* Media.xcassets in Resources */,
 				D2D3DAE5289442B5000130D5 /* Main.storyboard in Resources */,
@@ -290,10 +296,29 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		D27B988028C0CD680047358F /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D27B988328C0D55B0047358F /* Base */,
+			);
+			name = Info.plist;
+			path = MeetnRun;
+			sourceTree = SOURCE_ROOT;
+		};
+		D2CEC9E928C0C66D008ABD00 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2CEC9EA28C0C672008ABD00 /* es */,
+				D2CEC9EB28C0C6AA008ABD00 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		D2D3DAE3289442B5000130D5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D2D3DAE4289442B5000130D5 /* Base */,
+				D2CEC9DF28C0C28E008ABD00 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -360,6 +385,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = /Users/alugo/MeetAndRun/ios/MeetNRun/MeetnRun/MeetnRun/Base.lproj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -415,6 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = /Users/alugo/MeetAndRun/ios/MeetNRun/MeetnRun/MeetnRun/Base.lproj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

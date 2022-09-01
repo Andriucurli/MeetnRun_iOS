@@ -262,13 +262,6 @@
                                     <action selector="saveSettings:" destination="bfa-1D-tYs" eventType="valueChanged" id="Z4e-iM-Wvf"/>
                                 </connections>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVI-GA-XLY">
-                                <rect key="frame" x="145" y="321" width="85.333333333333314" height="32"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Logout"/>
-                                <connections>
-                                    <action selector="clickLogout:" destination="bfa-1D-tYs" eventType="touchUpInside" id="UU6-QJ-4Vz"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nhq-kK-n44"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -278,9 +271,7 @@
                             <constraint firstItem="BKg-np-gmK" firstAttribute="top" secondItem="nhq-kK-n44" secondAttribute="top" constant="32" id="E2y-Y0-upk"/>
                             <constraint firstItem="BKg-np-gmK" firstAttribute="leading" secondItem="nhq-kK-n44" secondAttribute="leading" constant="32" id="Kcg-u8-lFP"/>
                             <constraint firstItem="nhq-kK-n44" firstAttribute="trailing" secondItem="gnx-pU-NVR" secondAttribute="trailing" constant="32" id="RfJ-jz-WLF"/>
-                            <constraint firstItem="mVI-GA-XLY" firstAttribute="centerX" secondItem="iNQ-is-ROF" secondAttribute="centerX" id="RuZ-w2-PGF"/>
                             <constraint firstItem="gnx-pU-NVR" firstAttribute="top" secondItem="hEi-9K-nVr" secondAttribute="bottom" constant="16" id="VNj-Yq-h58"/>
-                            <constraint firstItem="mVI-GA-XLY" firstAttribute="top" secondItem="VfL-ZS-o07" secondAttribute="bottom" constant="32" id="cE6-cH-hgZ"/>
                             <constraint firstItem="OzQ-Ou-GV7" firstAttribute="top" secondItem="BKg-np-gmK" secondAttribute="bottom" constant="32" id="dFP-x4-rk4"/>
                             <constraint firstItem="nhq-kK-n44" firstAttribute="trailing" secondItem="hEi-9K-nVr" secondAttribute="trailing" constant="32" id="oNO-7R-mAe"/>
                             <constraint firstItem="hEi-9K-nVr" firstAttribute="top" secondItem="nhq-kK-n44" secondAttribute="top" constant="32" id="oSh-XK-SiP"/>

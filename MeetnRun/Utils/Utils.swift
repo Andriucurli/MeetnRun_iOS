@@ -11,7 +11,13 @@ import EventKit
 
  class Utils {
      
-     static let Days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+     static let Days = [NSLocalizedString("MONDAY", comment: "Monday"),
+                        NSLocalizedString("TUESDAY", comment: "Tuesday"),
+                        NSLocalizedString("WEDNESDAY", comment: "Wednesday"),
+                        NSLocalizedString("THURSDAY", comment: "Thursday"),
+                        NSLocalizedString("FRIDAY", comment: "Friday"),
+                        NSLocalizedString("SATURDAY", comment: "Saturday"),
+                        NSLocalizedString("SUNDAY", comment: "Sunday")]
      
      static public func getDayName(_ day : Int) -> String?{
          return Days[day]

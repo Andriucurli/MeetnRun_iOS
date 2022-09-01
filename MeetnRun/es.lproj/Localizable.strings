@@ -1,0 +1,55 @@
+/*
+  Localizable.strings
+  MeetnRun
+
+  Created by ALugo on 1/9/22.
+  
+*/
+"CANCEL" = "Cancelar";
+"DELETE" = "Borrar";
+"DONE" = "Hecho";
+"PACIENTS" = "Pacientes";
+"CAMERA" = "Camara";
+"ALBUM_ROLL" = "Album";
+"WARNING" = "Cuidado";
+
+"MONDAY" = "Lunes";
+"TUESDAY" = "Martes";
+"WEDNESDAY" = "Miércoles";
+"THURSDAY" = "Jueves";
+"FRIDAY" = "Viernes";
+"SATURDAY" = "Sábado";
+"SUNDAY" = "Domingo";
+//ModelExtensions
+"MESSAGE_TYPE_CREATED" = "Una cita con %@ ha sido creada";
+"MESSAGE_TYPE_NEED_CONFIRMATION" = "Una cita con %@ ha sido solicitada";
+"MESSAGE_TYPE_CONFIRMED" = "La cita con %@ ha sido confirmada";
+"MESSAGE_TYPE_NEED_MODIFICATION" = "%@ ha solicitado la modificación de una cita";
+"MESSAGE_TYPE_MODIFIED" = "La cita con %@ ha sido modificada";
+"MESSAGE_TYPE_CANCELLED" = "La cita con %@ ha sido cancelada";
+// AppointmentViewController
+"ALERT_TITLE_CANCELAPPOINTMENT" = "Cancelar Cita";
+"ALERT_MESSAGE_CANCELAPPOINTMENT" = "¿Realmente desea cancelar su cita?";
+"ALERT_TITLE_MODIFYAPPOINTMENT" = "Seleccione un nuevo horario";
+"ALERT_MESSAGE_MODIFYAPPOINTMENT" = "Escoja otra hora para reprogramar su cita";
+"EVENT_TITLE" = "Cita con %@";
+//NotificationsViewController
+"TEXT_BACKGROUND_NONOTIFICATIONS" = "No hay notificaciones sin ver";
+//UserViewController
+"TITLE_PHOTO_MENU" = "Origen de la Foto";
+"MESSAGE_PHOTO_MENU" = "Seleccione una opción";
+//ListController
+"TEXT_BACKGROUND_NOAPPOINTMENTS" = "No hay citas activas";
+//HomeTabController
+"NOTIFICATION_TITLE" = "Compruebe sus notificaciones";
+"NOTIFICATION_BODY" = "Parece que hay nuevas sin ver";
+//AlertHandler
+"MESSAGE_WARNING_EMPTYFIELDS" = "Algunos campos están vacios. Por favor, compruebe la información introducida o intentelo más tarde.";
+"MESSAGE_ERROR_PASSWORDNOTEQUALS" = "Las contraseñas no son iguales.";
+"MESSAGE_ERROR_INCORRECTUSERNAMEPASSWORD" = "Usuario o contraseña incorrectos.";
+"MESSAGE_ERROR_CANNOTCREATEUSER" = "No se puede crear el usuario. Compruebe los campos o intentelo más tarde.";
+"MESSAGE_ERROR_CANNOTCREATEAPPOINTMENT" = "No se puede crear la cita. Compruebe los campos o intentelo más tarde.";
+"MESSAGE_INFO_APPOINTMENTCREATED" = "Cita creada";
+"MESSAGE_INFO_APPOINTMENTREQUESTED" = "Cita solicitada";
+"MESSAGE_WARNING_NOPHONEAVAILABLE" = "La llamada no está disponible porque el teléfono no está registrado para este usuario o la función de llamada no está disponible es su dispositivo.";
+"MESSAGE_WARNING_NOMAILAVAILABLE" = "El email no está disponible porque la dirección de correo no está registrada para este usuario.";

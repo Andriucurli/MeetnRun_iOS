@@ -105,17 +105,20 @@ class UserViewController: BaseViewController, UITextFieldDelegate, UIImagePicker
         
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             
-            let menu = UIAlertController(title: "Photo Source", message: "Select an option", preferredStyle: .actionSheet)
-            menu.addAction(UIAlertAction(title: "Camera", style: .default, handler: {(alert : UIAlertAction) -> Void in
+            let menu = UIAlertController(title: NSLocalizedString("TITLE_PHOTO_MENU", comment: "Title for the photo menu"), message:  NSLocalizedString("MESSAGE_PHOTO_MENU", comment: "Message for the photo menu"), preferredStyle: .actionSheet)
+            menu.addAction(UIAlertAction(title: NSLocalizedString("CAMERA", comment: "camera"), style: .default, handler: {(alert : UIAlertAction) -> Void in
                 imageController.sourceType = .camera
+                self.present(imageController, animated: true, completion: nil)
             }))
-            menu.addAction(UIAlertAction(title: "Album Roll", style: .default, handler: {(alert : UIAlertAction) -> Void in
+            menu.addAction(UIAlertAction(title: NSLocalizedString("ALBUM_ROLL", comment: "Album roll"), style: .default, handler: {(alert : UIAlertAction) -> Void in
                 imageController.sourceType = .savedPhotosAlbum
+                self.present(imageController, animated: true, completion: nil)
             }))
+            self.present(menu, animated: true, completion: nil)
         } else {
             imageController.sourceType = .savedPhotosAlbum
+            present(imageController, animated: true, completion: nil)
         }
-        present(imageController, animated: true, completion: nil)
     }
     
     @IBAction func changeUserData(_ sender: Any){

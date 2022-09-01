@@ -1,45 +1,120 @@
 
+/* Class = "UILabel"; text = "Th"; ObjectID = "0Od-r1-aW1"; */
+"0Od-r1-aW1.text" = "Ju";
+
 /* Class = "UITextField"; placeholder = "Username"; ObjectID = "14o-Ql-ghC"; */
-"14o-Ql-ghC.placeholder" = "Nombre de usuario";
+"14o-Ql-ghC.placeholder" = "Usuario";
 
-/* Class = "UILabel"; text = "User"; ObjectID = "1fS-30-MoG"; */
-"1fS-30-MoG.text" = "Usuario";
+/* Class = "UIButton"; configuration.title = "Cancel"; ObjectID = "2Zw-Ch-gVQ"; */
+"2Zw-Ch-gVQ.configuration.title" = "Cancelar";
 
-/* Class = "UILabel"; text = "Sa"; ObjectID = "3DT-ih-R3J"; */
-"3DT-ih-R3J.text" = "Sa";
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2Zw-Ch-gVQ"; */
+"2Zw-Ch-gVQ.normalTitle" = "Boton";
 
-/* Class = "UILabel"; text = "Su"; ObjectID = "490-L8-YdW"; */
-"490-L8-YdW.text" = "Do";
+/* Class = "UIButton"; configuration.title = "Modify"; ObjectID = "2oV-Ha-f5x"; */
+"2oV-Ha-f5x.configuration.title" = "Modificar";
 
-/* Class = "UILabel"; text = "Day"; ObjectID = "6wU-dK-v1D"; */
-"6wU-dK-v1D.text" = "Día";
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2oV-Ha-f5x"; */
+"2oV-Ha-f5x.normalTitle" = "Botón";
 
-/* Class = "UILabel"; text = "Fr"; ObjectID = "ARo-EW-QZ4"; */
-"ARo-EW-QZ4.text" = "Vi";
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "52v-SP-sdn"; */
+"52v-SP-sdn.title" = "Elemento";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "5jz-o9-Wu3"; */
+"5jz-o9-Wu3.text" = "Etiqueta";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "5rk-YI-swY"; */
+"5rk-YI-swY.title" = "Elemento";
+
+/* Class = "UILabel"; text = "Hour"; ObjectID = "6wU-dK-v1D"; */
+"6wU-dK-v1D.text" = "Hora";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "6xC-UG-pkD"; */
+"6xC-UG-pkD.title" = "Elemento";
+
+/* Class = "UILabel"; text = "Fr"; ObjectID = "74u-Bv-qd4"; */
+"74u-Bv-qd4.text" = "Vi";
+
+/* Class = "UILabel"; text = "Su"; ObjectID = "7Sq-6g-zmf"; */
+"7Sq-6g-zmf.text" = "Do";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "A3s-iH-mYM"; */
+"A3s-iH-mYM.text" = "Etiquet";
+
+/* Class = "UILabel"; text = "Mo"; ObjectID = "AC2-PX-kbm"; */
+"AC2-PX-kbm.text" = "Lu";
+
+/* Class = "UIButton"; configuration.title = "Add Photo"; ObjectID = "B0F-4c-gnQ"; */
+"B0F-4c-gnQ.configuration.title" = "Añadir Foto";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "B0F-4c-gnQ"; */
+"B0F-4c-gnQ.normalTitle" = "Boton";
 
 /* Class = "UITextField"; placeholder = "Name"; ObjectID = "BAS-Ia-0b7"; */
 "BAS-Ia-0b7.placeholder" = "Nombre";
 
+/* Class = "UILabel"; text = "Enable Notifications"; ObjectID = "BKg-np-gmK"; */
+"BKg-np-gmK.text" = "Habilitar Notificationes";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "C2H-Nw-nJN"; */
+"C2H-Nw-nJN.normalTitle" = "Boton";
+
+/* Class = "UITabBarController"; title = "Home"; ObjectID = "DO4-eV-t1i"; */
+"DO4-eV-t1i.title" = "Home";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "DUi-tE-WLu"; */
+"DUi-tE-WLu.normalTitle" = "Boton";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "DZB-0T-EhN"; */
+"DZB-0T-EhN.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "DlP-Nt-m0L"; */
+"DlP-Nt-m0L.text" = "Etiqueta";
+
 /* Class = "UITextField"; placeholder = "Repeat Password"; ObjectID = "E32-Xo-aoj"; */
-"E32-Xo-aoj.placeholder" = "Repita la contraseña";
+"E32-Xo-aoj.placeholder" = "Repetir Contraseña";
 
 /* Class = "UIButton"; configuration.title = "Cancel"; ObjectID = "E9G-Am-aeN"; */
 "E9G-Am-aeN.configuration.title" = "Cancelar";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "E9G-Am-aeN"; */
-"E9G-Am-aeN.normalTitle" = "Button";
+"E9G-Am-aeN.normalTitle" = "Boton";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "EOY-Lm-BpA"; */
+"EOY-Lm-BpA.text" = "Email";
 
 /* Class = "UILabel"; text = "Repeat Password"; ObjectID = "Fff-Wy-H1H"; */
-"Fff-Wy-H1H.text" = "Repita la contraseña";
+"Fff-Wy-H1H.text" = "Repetir Contraseña";
 
 /* Class = "UITextField"; placeholder = "Phone"; ObjectID = "Fhy-Vq-7sx"; */
 "Fhy-Vq-7sx.placeholder" = "Telefono";
 
-/* Class = "UITextField"; placeholder = "Username"; ObjectID = "Goz-YA-Efo"; */
-"Goz-YA-Efo.placeholder" = "Nombre de usuario";
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Fxs-bj-0st"; */
+"Fxs-bj-0st.title" = "Elemento";
 
-/* Class = "UILabel"; text = "Mo"; ObjectID = "IFw-Tc-1S3"; */
-"IFw-Tc-1S3.text" = "Lu";
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "Goz-YA-Efo"; */
+"Goz-YA-Efo.placeholder" = "Usuario";
+
+/* Class = "UINavigationItem"; title = "Notifications"; ObjectID = "Hth-hx-tTd"; */
+"Hth-hx-tTd.title" = "Notificaciones";
+
+/* Class = "UILabel"; text = "Tu"; ObjectID = "IXd-mc-8rq"; */
+"IXd-mc-8rq.text" = "Ma";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "JBi-2m-Y96"; */
+"JBi-2m-Y96.title" = "Elemento";
+
+/* Class = "UILabel"; text = "We"; ObjectID = "JyI-hU-Pvn"; */
+"JyI-hU-Pvn.text" = "Mi";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "KBo-yU-Olq"; */
+"KBo-yU-Olq.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Moh-uq-cEA"; */
+"Moh-uq-cEA.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Nhp-Ea-lUu"; */
+"Nhp-Ea-lUu.normalTitle" = "Button";
 
 /* Class = "UIViewController"; title = "Add Appointment"; ObjectID = "OKT-Dg-dc0"; */
 "OKT-Dg-dc0.title" = "Añadir Cita";
@@ -47,8 +122,14 @@
 /* Class = "UIViewController"; title = "User"; ObjectID = "OYO-eL-u2N"; */
 "OYO-eL-u2N.title" = "Usuario";
 
-/* Class = "UILabel"; text = "Hour"; ObjectID = "Q00-Vd-D3i"; */
-"Q00-Vd-D3i.text" = "Hora";
+/* Class = "UILabel"; text = "Label"; ObjectID = "OdA-WM-7ml"; */
+"OdA-WM-7ml.text" = "Label";
+
+/* Class = "UILabel"; text = "Create Recordatories"; ObjectID = "OzQ-Ou-GV7"; */
+"OzQ-Ou-GV7.text" = "Crear Recordatorios";
+
+/* Class = "UILabel"; text = "Day"; ObjectID = "Q00-Vd-D3i"; */
+"Q00-Vd-D3i.text" = "Día";
 
 /* Class = "UILabel"; text = "Name"; ObjectID = "QFV-Ko-gxC"; */
 "QFV-Ko-gxC.text" = "Nombre";
@@ -59,53 +140,89 @@
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "R5p-Lg-rWu"; */
 "R5p-Lg-rWu.normalTitle" = "Button";
 
-/* Class = "UILabel"; text = "We"; ObjectID = "TS5-VE-1GK"; */
-"TS5-VE-1GK.text" = "Mi";
+/* Class = "UILabel"; text = "Label"; ObjectID = "Smc-wI-xQ4"; */
+"Smc-wI-xQ4.text" = "Label";
 
 /* Class = "UIButton"; configuration.title = "Log in"; ObjectID = "Uj7-22-lSZ"; */
-"Uj7-22-lSZ.configuration.title" = "Acceder";
+"Uj7-22-lSZ.configuration.title" = "Ingresar";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Uj7-22-lSZ"; */
 "Uj7-22-lSZ.normalTitle" = "Button";
 
+/* Class = "UILabel"; text = "Where are we looking to go next?"; ObjectID = "Usa-c0-b0J"; */
+"Usa-c0-b0J.text" = "¿Adónde queremos llegar?";
+
 /* Class = "UITabBarItem"; title = "User"; ObjectID = "VFA-UK-y3U"; */
 "VFA-UK-y3U.title" = "Usuario";
 
-/* Class = "UILabel"; text = "Tu"; ObjectID = "WL7-ea-6Ba"; */
-"WL7-ea-6Ba.text" = "Ma";
+/* Class = "UIButton"; configuration.title = "About Us"; ObjectID = "VfL-ZS-o07"; */
+"VfL-ZS-o07.configuration.title" = "Sobre Nosotros";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "VfL-ZS-o07"; */
+"VfL-ZS-o07.normalTitle" = "Button";
 
 /* Class = "UITextField"; placeholder = "Email"; ObjectID = "Wab-1U-esc"; */
 "Wab-1U-esc.placeholder" = "Email";
 
+/* Class = "UILabel"; text = "Sa"; ObjectID = "Wqt-V6-sSR"; */
+"Wqt-V6-sSR.text" = "Sa";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "XFz-yv-hsF"; */
+"XFz-yv-hsF.normalTitle" = "Button";
+
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "YHy-Cg-fNH"; */
 "YHy-Cg-fNH.placeholder" = "Contraseña";
 
+/* Class = "UIViewController"; title = "Notifications"; ObjectID = "YPZ-hE-BCq"; */
+"YPZ-hE-BCq.title" = "Notificationes";
+
 /* Class = "UILabel"; text = "Username"; ObjectID = "ZXA-nK-6Z5"; */
-"ZXA-nK-6Z5.text" = "Nombre de usuario";
+"ZXA-nK-6Z5.text" = "Usuario";
 
 /* Class = "UILabel"; text = "Phone"; ObjectID = "aDN-VF-V5B"; */
 "aDN-VF-V5B.text" = "Telefono";
+
+/* Class = "UILabel"; text = "My goals is to gain experience in App Development to become a Freelance and associate with other companies to develop solutions for everyday problems, with an ethical point of view and prevailing the human value."; ObjectID = "aJn-fm-JU1"; */
+"aJn-fm-JU1.text" = "Mis objetivos son ganar experiencia en el desarrollo de Apps para convertirme en Freelance y asociarme con otras empresas para implementar soluciones para problemas diarios con un punto de vista ético y prevaleciendo el factor humano.";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "aYk-s0-vrV"; */
+"aYk-s0-vrV.placeholder" = "Usuario";
 
 /* Class = "UILabel"; text = "Password"; ObjectID = "asq-bp-bo8"; */
 "asq-bp-bo8.text" = "Contraseña";
 
 /* Class = "UIViewController"; title = "Settings"; ObjectID = "bfa-1D-tYs"; */
-"bfa-1D-tYs.title" = "Ajustes";
+"bfa-1D-tYs.title" = "Configuración";
 
 /* Class = "UILabel"; text = "Anything"; ObjectID = "cVr-y6-F6I"; */
 "cVr-y6-F6I.text" = "Anything";
 
 /* Class = "UILabel"; text = "Username"; ObjectID = "cqa-32-Uyr"; */
-"cqa-32-Uyr.text" = "Nombre de usuario";
+"cqa-32-Uyr.text" = "Usuario";
 
 /* Class = "UIViewController"; title = "Add User"; ObjectID = "d33-dX-GRa"; */
-"d33-dX-GRa.title" = "Añadir usuario";
+"d33-dX-GRa.title" = "Añadir Usuario";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "dNz-Wy-sRa"; */
+"dNz-Wy-sRa.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "How did i get here?"; ObjectID = "dgw-2z-PJk"; */
+"dgw-2z-PJk.text" = "¿Cómo he llegado hasta aquí?";
+
+/* Class = "UIBarButtonItem"; title = "Settings"; ObjectID = "e3r-gM-v2x"; */
+"e3r-gM-v2x.title" = "Configuración";
+
+/* Class = "UILabel"; text = "I studied Computer Engineering at Universidad Autónoma de Madrid (finished in 2015) and Android and iOS Development at Tokio School Academy (currently). After finishing my studies at college, I started working as a Full Stack Developer at Pixelware for 3 years and at Food Experts for 3 more years, learning about WebApps Development using C# programming language and Azure Environment."; ObjectID = "eCN-Nx-gNp"; */
+"eCN-Nx-gNp.text" = "Estudié Ingeniería Informática en la Universidad Autónoma de Madrid (finalizado en 2015) y desarrollo de Android e iOS en la academia Tokio School (En curso). Después de finalizar mis estudios en la universidad, empecé a trabajar como Full Stack Developer por 6 años más, aprendiendo acerca el desarrollo de WebApps usando C# y el entorno Azure.";
 
 /* Class = "UILabel"; text = "Password"; ObjectID = "eWP-wn-syB"; */
 "eWP-wn-syB.text" = "Contraseña";
 
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "eWk-OE-z8V"; */
+"eWk-OE-z8V.normalTitle" = "Button";
+
 /* Class = "UILabel"; text = "Username"; ObjectID = "f6g-DL-Rht"; */
-"f6g-DL-Rht.text" = "Nombre de usuario";
+"f6g-DL-Rht.text" = "Usuario";
 
 /* Class = "UILabel"; text = "Who am I?"; ObjectID = "fsI-sm-PmP"; */
 "fsI-sm-PmP.text" = "¿Quién soy?";
@@ -119,41 +236,83 @@
 /* Class = "UILabel"; text = "Name"; ObjectID = "hkM-CC-6ij"; */
 "hkM-CC-6ij.text" = "Nombre";
 
-/* Class = "UILabel"; text = "Th"; ObjectID = "kYU-an-ggw"; */
-"kYU-an-ggw.text" = "Ju";
+/* Class = "UINavigationItem"; title = "Add Appointment"; ObjectID = "ja1-2h-eFb"; */
+"ja1-2h-eFb.title" = "Añadir Cita";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mVY-Bv-RqF"; */
+"mVY-Bv-RqF.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mt0-7g-JMa"; */
+"mt0-7g-JMa.normalTitle" = "Button";
 
 /* Class = "UIViewController"; title = "List"; ObjectID = "nCU-g5-ZhF"; */
-"nCU-g5-ZhF.title" = "Lista";
+"nCU-g5-ZhF.title" = "Listado";
+
+/* Class = "UILabel"; text = "Username"; ObjectID = "nmV-vv-kiu"; */
+"nmV-vv-kiu.text" = "Usuario";
 
 /* Class = "UITextField"; placeholder = "Name"; ObjectID = "pV4-t7-h9a"; */
 "pV4-t7-h9a.placeholder" = "Nombre";
 
+/* Class = "UIButton"; configuration.title = "Create and Invite"; ObjectID = "qQX-l6-CjM"; */
+"qQX-l6-CjM.configuration.title" = "Crear e Invitar";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "qQX-l6-CjM"; */
+"qQX-l6-CjM.normalTitle" = "Button";
+
 /* Class = "UILabel"; text = "MeetNRun"; ObjectID = "qXC-k9-vbR"; */
 "qXC-k9-vbR.text" = "MeetNRun";
+
+/* Class = "UINavigationItem"; title = "List"; ObjectID = "qeS-sT-89b"; */
+"qeS-sT-89b.title" = "Listado";
 
 /* Class = "UITabBarItem"; title = "Add Appointment"; ObjectID = "r7B-s5-6gP"; */
 "r7B-s5-6gP.title" = "Añadir Cita";
 
-/* Class = "UILabel"; text = "Add Appointment"; ObjectID = "uey-SO-ZpH"; */
-"uey-SO-ZpH.text" = "Añadir Cita";
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "rHw-T9-oqg"; */
+"rHw-T9-oqg.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "sTH-Mk-6bx"; */
+"sTH-Mk-6bx.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "User"; ObjectID = "tWJ-ti-cVa"; */
+"tWJ-ti-cVa.title" = "Usuario";
+
+/* Class = "UILabel"; text = "First, let me introduce myself. My name is Galo Lugo, a 28 years old guy from Ecuador. I spent 21 years in Madrid but i was born in Quito, city where I am actually living."; ObjectID = "vEP-Qs-rAj"; */
+"vEP-Qs-rAj.text" = "En primer lugar, dejeme introducirme. Mi nombre es Galo Lugo, un chico de 28 años nacido en Ecuador. He pasado 21 años de mi vida en Madrid pero soy nacido en Quito, la ciudad en la que vivo actualmente.";
 
 /* Class = "UIViewController"; title = "About Us"; ObjectID = "vbR-Kj-vSI"; */
 "vbR-Kj-vSI.title" = "Sobre Nosotros";
 
-/* Class = "UILabel"; text = "Label"; ObjectID = "vxZ-0I-r8Z"; */
-"vxZ-0I-r8Z.text" = "Label";
-
 /* Class = "UIButton"; configuration.title = "Sign up as Professional"; ObjectID = "w2H-0o-mgW"; */
-"w2H-0o-mgW.configuration.title" = "Sign up as Professional";
+"w2H-0o-mgW.configuration.title" = "Registrarme como Profesional";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "w2H-0o-mgW"; */
 "w2H-0o-mgW.normalTitle" = "Button";
 
 /* Class = "UITabBarItem"; title = "List"; ObjectID = "wRX-x8-6Uq"; */
-"wRX-x8-6Uq.title" = "List";
+"wRX-x8-6Uq.title" = "Listado";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "wq5-rl-jL8"; */
+"wq5-rl-jL8.text" = "Label";
 
 /* Class = "UILabel"; text = "Available Schedule"; ObjectID = "yt1-zA-xxy"; */
-"yt1-zA-xxy.text" = "Available Schedule";
+"yt1-zA-xxy.text" = "Horario Disponible";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "z4w-S3-WKs"; */
+"z4w-S3-WKs.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "z7l-Cb-MCf"; */
+"z7l-Cb-MCf.text" = "00:00";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "zHb-C0-hcI"; */
+"zHb-C0-hcI.title" = "Item";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "zT1-gs-ASI"; */
+"zT1-gs-ASI.title" = "Configuración";
 
 /* Class = "UILabel"; text = "Email"; ObjectID = "zp3-x0-AND"; */
 "zp3-x0-AND.text" = "Email";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "zvv-u5-5On"; */
+"zvv-u5-5On.title" = "Item";

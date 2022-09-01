@@ -35,11 +35,9 @@ class HomeTabController: UITabBarController {
         if UserDefaultsManager.getNotificationsEnabled() && nc.getPendingNotifications(user: user).count > 0 {
             
             let content = UNMutableNotificationContent()
-            content.title = "Check your notifications"
-            content.body = "It looks like there are new unseen ones"
-            content.badge = NSNumber(value: 3)
+            content.title = NSLocalizedString("NOTIFICATION_TITLE", comment: "Title for the notification")
+            content.body = NSLocalizedString("NOTIFICATION_BODY", comment: "Body for the notification")
             content.sound = UNNotificationSound.default
-
 
             // choose a random identifier
             let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: nil)
@@ -47,7 +45,5 @@ class HomeTabController: UITabBarController {
             // add our notification request
             UNUserNotificationCenter.current().add(request)
         }
-        
     }
-
 }

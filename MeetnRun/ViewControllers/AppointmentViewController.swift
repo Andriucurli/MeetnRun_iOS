@@ -77,11 +77,11 @@ class AppointmentViewController: BaseViewController, MFMailComposeViewController
     
     @IBAction func clickCancelButton(_ sender: Any) {
        
-        let confirmAlert = UIAlertController(title: "Cancel Appointment", message: "Do you really want to cancel this appointment?", preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {(action : UIAlertAction!) in
+        let confirmAlert = UIAlertController(title: NSLocalizedString("ALERT_TITLE_CANCELAPPOINTMENT", comment: "title for the alert to cancel appointment"), message: NSLocalizedString("ALERT_MESSAGE_CANCELAPPOINTMENT", comment: "message for the laert to cancel appointment"), preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: NSLocalizedString("CANCEL", comment: "cancel"), style: .cancel, handler: {(action : UIAlertAction!) in
             confirmAlert.dismiss(animated: true)
         })
-        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { (action : UIAlertAction) in
+        let deleteAction = UIAlertAction(title: NSLocalizedString("DELETE", comment: "delete"), style: .destructive, handler: { (action : UIAlertAction) in
             if self.ac!.cancelAppointment(appointment: self.appointment){
                 _ = self.nc!.createNotification(sender: self.user, receiver: self.anything, type: .CANCELLED, appointment: self.appointment)
                 self.navigationController?.popViewController(animated: true)
@@ -104,9 +104,9 @@ class AppointmentViewController: BaseViewController, MFMailComposeViewController
         pickerView.dataSource = self
         vc.view.addSubview(pickerView)
         pickerView.reloadAllComponents()
-        let editRadiusAlert = UIAlertController(title: "Choose new schedule", message: "Choose another time to reschedule your appointment.", preferredStyle: UIAlertController.Style.alert)
+        let editRadiusAlert = UIAlertController(title: NSLocalizedString("ALERT_TITLE_MODIFYAPPOINTMENT", comment: "title for the alert to modify appointment"), message: NSLocalizedString("ALERT_MESSAGE_MODIFYAPPOINTMENT", comment: "message for alert to modify appointment"), preferredStyle: UIAlertController.Style.alert)
         editRadiusAlert.setValue(vc, forKey: "contentViewController")
-        editRadiusAlert.addAction(UIAlertAction(title: "Done", style: .default, handler: { (alert : UIAlertAction) in
+        editRadiusAlert.addAction(UIAlertAction(title: NSLocalizedString("DONE", comment: "done"), style: .default, handler: { (alert : UIAlertAction) in
             if self.day == nil || self.hour == nil {
                 editRadiusAlert.dismiss(animated: true)
                 let alert = AlertHandler.getWarningEmptyFields()
@@ -127,7 +127,7 @@ class AppointmentViewController: BaseViewController, MFMailComposeViewController
                 }
             }
         }))
-        editRadiusAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (alert : UIAlertAction) in
+        editRadiusAlert.addAction(UIAlertAction(title: NSLocalizedString("CANCEL", comment: "cancel"), style: .cancel, handler: { (alert : UIAlertAction) in
             editRadiusAlert.dismiss(animated: true)
         }))
         self.present(editRadiusAlert, animated: true)
@@ -150,7 +150,7 @@ class AppointmentViewController: BaseViewController, MFMailComposeViewController
             DispatchQueue.main.async {
                 if (granted) && (error == nil) {
                     let event = EKEvent(eventStore: self.eventStore)
-                    event.title = String(format: "Appointment with %@", self.anything.name!)
+                    event.title = String(format: NSLocalizedString("EVENT_TITLE", comment: "Title for the creation of an event"), self.anything.name!)
                     event.startDate = firstDate
                     event.recurrenceRules = [recurrenceRule]
                     event.endDate = firstDate.addingTimeInterval(60*60)

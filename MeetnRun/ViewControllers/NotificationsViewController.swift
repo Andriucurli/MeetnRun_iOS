@@ -59,16 +59,25 @@ class NotificationsViewController: BaseViewController, UITableViewDelegate, UITa
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         notifications = nc?.getPendingNotifications(user: self.user) ?? []
+        
+        for notification in notifications {
+            if notification.type != Notification.NType.NEED_MODIFICATION.rawValue &&
+                notification.type != Notification.NType.NEED_CONFIRMATION.rawValue {
+                nc?.markNotificationAsSeen(notification: notification)
+            }
+        }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if notifications.count == 0 {
             let emptyLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
-                emptyLabel.text = "No Unseen Notifications"
+            emptyLabel.text = NSLocalizedString("TEXT_BACKGROUND_NONOTIFICATIONS", comment: "text for the background when there is no notifications")
             emptyLabel.textAlignment = NSTextAlignment.center
                 notificationsTableView.backgroundView = emptyLabel
             notificationsTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-            }
+        } else {
+            notificationsTableView.backgroundView = nil
+        }
         return notifications.count
     }
     
