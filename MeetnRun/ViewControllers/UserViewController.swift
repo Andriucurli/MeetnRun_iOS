@@ -8,60 +8,40 @@
 import UIKit
 
 
-protocol PHourSetter {
+protocol ScheduleHourSetter {
     func setHour(hour : Int, day : Int, value : Bool)
+    func checkHour(day : Int, hour : Int) -> Bool
 }
 
 class UIScheduleCell : UITableViewCell {
     
     @IBOutlet weak var hourLabel: UILabel!
-    @IBOutlet weak var mondayCheck: UIButton!
-    @IBOutlet weak var tuesdayCheck: UIButton!
-    @IBOutlet weak var wednesdayCheck: UIButton!
-    @IBOutlet weak var thursdayCheck: UIButton!
-    @IBOutlet weak var fridayCheck: UIButton!
-    @IBOutlet weak var saturdayCheck: UIButton!
-    @IBOutlet weak var sundayCheck: UIButton!
+    @IBOutlet weak var mondayCheck: Checkbox!
+    @IBOutlet weak var tuesdayCheck: Checkbox!
+    @IBOutlet weak var wednesdayCheck: Checkbox!
+    @IBOutlet weak var thursdayCheck: Checkbox!
+    @IBOutlet weak var fridayCheck: Checkbox!
+    @IBOutlet weak var saturdayCheck: Checkbox!
+    @IBOutlet weak var sundayCheck: Checkbox!
     
     var hour : Int = 0
     
-    var hourSetter : PHourSetter!
+    var hourSetter : ScheduleHourSetter!
     
     @IBAction func changeHourValue(_ sender : Any){
         let actionButton = sender as! Checkbox
-        hourSetter.setHour(hour: self.hour, day: actionButton.tag, value: actionButton.isChecked)
+        
+        if actionButton.isChecked && !hourSetter.checkHour(day: actionButton.tag, hour: self.hour) {
+            actionButton.isChecked = !actionButton.isChecked
+            return
+        }
+        
+        hourSetter.setHour(hour: self.hour, day: actionButton.tag, value: !actionButton.isChecked)
     }
     
 }
 
-class UserViewController: BaseViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate, PHourSetter {
-    func setHour(hour: Int, day: Int, value : Bool) {
-        print(hour)
-        print(day)
-        print(value)
-    }
-    
-
-    
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 24
-    }
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! UIScheduleCell
-        cell.hourLabel.text = String(format: "%02d:00", indexPath.row)
-        cell.hour = indexPath.row
-        cell.hourSetter = self
-        return cell
-    }
-    
-    
+class UserViewController: BaseViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate, ScheduleHourSetter {
     
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var usernameTextField: UITextField!
@@ -72,14 +52,31 @@ class UserViewController: BaseViewController, UITextFieldDelegate, UIImagePicker
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var scheduleTableView: UITableView!
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return false
-    }
+    @IBOutlet weak var availableScheduleTitle: UILabel!
+    @IBOutlet weak var scheduleHeader: UIView!
+    @IBOutlet weak var scheduleTable: UIScrollView!
+    @IBOutlet weak var mainScrollView: UIScrollView!
+    
+    let ac = AppointmentController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        nameTextField.delegate = self
+        emailTextField.delegate = self
+        phoneTextField.delegate = self
+        
+        scheduleTableView.dataSource = self
+        scheduleTableView.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        initForm()
+    }
+    
+    func initForm(){
         usernameTextField.text = user.username
         nameTextField.text = user.name
         emailTextField.text = user.email
@@ -88,16 +85,18 @@ class UserViewController: BaseViewController, UITextFieldDelegate, UIImagePicker
             photoView.image = UIImage(data: user.photo!)
         }
         
-        nameTextField.delegate = self
-        emailTextField.delegate = self
-        phoneTextField.delegate = self
-        
         if !user.isProfessional(){
             self.navigationItem.setRightBarButton(nil, animated: false)
+            availableScheduleTitle.isHidden = true
+            scheduleHeader.isHidden = true
+            scheduleTable.isHidden = true
+            mainScrollView.contentSize = CGSize(width: self.view.frame.size.width, height: mainScrollView.frame.height)
         }
-        
-        scheduleTableView.dataSource = self
-        scheduleTableView.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
     }
     
     @IBAction func clickAddPhoto(_ sender: Any) {
@@ -120,7 +119,7 @@ class UserViewController: BaseViewController, UITextFieldDelegate, UIImagePicker
     }
     
     @IBAction func changeUserData(_ sender: Any){
-        uc.editUser(user: user, nameTextField.text, phoneTextField.text, emailTextField.text)
+        uc?.editUser(user: user, nameTextField.text, phoneTextField.text, emailTextField.text)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -128,12 +127,86 @@ class UserViewController: BaseViewController, UITextFieldDelegate, UIImagePicker
             photoView.contentMode = .scaleAspectFit
             photoView.image = pickedImage
             user.photo = pickedImage.pngData()
-            uc.editUserPhoto(user: user, photoData: pickedImage.pngData())
+            uc?.editUserPhoto(user: user, photoData: pickedImage.pngData())
             
             }
 
             dismiss(animated: true, completion: nil)
     }
     
+    func checkHour(day: Int, hour: Int) -> Bool{
+        return ac?.checkAppointment(user: self.user, day: day, hour: hour) ?? false
+    }
+    
+    func setHour(hour: Int, day: Int, value : Bool) {
+        
+        if user.schedule != nil {
+            let bytei = hour/8;
+            let segmentByte = user.schedule![day * 3 + bytei];
+            let biti = hour%8;
+
+            user.schedule![day * 3 + bytei] = Utils.setBit(b: segmentByte, bit: 7-biti, value: value);
+            
+            uc?.setSchedule(user: user, user.schedule)
+        }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 24
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let hour = indexPath.row
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! UIScheduleCell
+        cell.hourLabel.text = String(format: "%02d:00", hour)
+        cell.hour = hour
+        
+        if user.isProfessional() {
+            for day : Int in 0...6 {
+                var checkbox : Checkbox?
+                switch day {
+                case 0:
+                    checkbox = cell.mondayCheck
+                    break
+                case 1:
+                    checkbox = cell.tuesdayCheck
+                    break
+                case 2:
+                    checkbox = cell.wednesdayCheck
+                    break
+                case 3:
+                    checkbox = cell.thursdayCheck
+                    break
+                case 4:
+                    checkbox = cell.fridayCheck
+                    break
+                case 5:
+                    checkbox = cell.saturdayCheck
+                    break
+                case 6:
+                    checkbox = cell.sundayCheck
+                    break
+                default:
+                    print("FALLO")
+                }
+                
+                let bytei = hour/8
+                let segmentByte = user.schedule![day * 3 + bytei]
+                let biti = hour%8
+                
+                if Utils.isBitSet(b: segmentByte, bit: 7-biti){
+                    checkbox?.isChecked = true
+                }
+            }
+        }
+        
+        cell.hourSetter = self
+        return cell
+    }
 }
 

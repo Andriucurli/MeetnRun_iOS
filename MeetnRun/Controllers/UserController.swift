@@ -8,74 +8,92 @@
 import UIKit
 import CoreData
 
-class UserController {
+class UserController : BaseController {
     
+    public static let initialScheduleByDay = Data([0x00,0xFF,0xF8,
+                0x00, 0xFF, 0xF8,
+                0x00, 0xFF, 0xF8,
+                0x00, 0xFF, 0xF8,
+                0x00, 0xFF, 0xF8,
+                0x00, 0xFF, 0xF8,
+                0x00, 0x00, 0x00]);
     
-    public func editUserPhoto(user : User, photoData : Data?){
-        guard let appDelegate =
-                UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-          
-          // 1
-        let managedContext =
-            appDelegate.persistentContainer.viewContext
+    public func setSchedule(user : User?,_ schedule : Data?) -> Bool {
         
-        user.photo = photoData
+        if user == nil ||
+            schedule == nil {
+            return false
+        }
+        
+        user!.schedule = schedule
         
         do {
             try managedContext.save()
           } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
+              return false
           }
+        return true
     }
     
-    public func editUser(user : User, _ name : String?, _ phone : String?, _ email : String?){
-        guard let appDelegate =
-                UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-          
-          // 1
-        let managedContext =
-            appDelegate.persistentContainer.viewContext
+    public func editUserPhoto(user : User?, photoData : Data?) -> Bool{
         
-        user.name = name
-        user.phone = phone
-        user.email = email
+        if user == nil {
+            return false
+        }
+        
+        user!.photo = photoData
+        
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+              print("Could not save. \(error), \(error.userInfo)")
+              return false
+          }
+        
+        return true
+    }
+    
+    public func editUser(user : User?, _ name : String?, _ phone : String?, _ email : String?) -> Bool{
+        
+        if user == nil {
+            return false
+        }
+        
+        user!.name = name
+        user!.phone = phone
+        user!.email = email
         
         do {
             try managedContext.save()
           } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
+              return false
           }
+        return true
     }
     
-    public func createProfessional(_ username : String, _ name : String, _ password : String) -> Bool{
+    public func createProfessional(username : String, name : String?, password : String?) -> User?{
         return createUser(username, name, password, email: nil, professional: nil)
     }
     
-    public func createPacient(_ username : String, _ email : String, professional : User) -> Bool{
+    public func createPacient(_ username : String?, _ email : String?, professional : User?) -> User?{
         return createUser(username, username, username, email: email, professional: professional)
     }
     
-    private func createUser (_ username : String, _ name : String, _ password : String, email : String?, professional : User?) -> Bool {
+    private func createUser (_ username : String?, _ name : String?, _ password : String?, email : String?, professional : User?) -> User? {
+        
+        if username == nil ||
+            name == nil ||
+            password == nil {
+            return nil
+        }
         
         let existingUser = getUser(username)
         
         if existingUser != nil {
-            return false
+            return nil
         }
-        
-        guard let appDelegate =
-                UIApplication.shared.delegate as? AppDelegate else {
-            return false
-        }
-          
-          // 1
-        let managedContext =
-            appDelegate.persistentContainer.viewContext
-          
           
         let user = User(context: managedContext)
         user.username = username
@@ -84,34 +102,32 @@ class UserController {
         user.email = email
         user.professional = professional
         
+        if professional == nil {
+            user.schedule = UserController.initialScheduleByDay
+        }
+        
         do {
             try managedContext.save()
           } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
-              return false
+              return nil
           }
         
-        return true
+        return user
     }
     
     
-    func getUser(_ username : String) -> User?{
+    func getUser(_ username : String?) -> User?{
+        
+        if username == nil {
+            return nil
+        }
         
         var users : [User] = []
         
-        guard let appDelegate =
-            UIApplication.shared.delegate as? AppDelegate else {
-              return nil
-          }
-          
-          let managedContext =
-            appDelegate.persistentContainer.viewContext
-          
-          //2
-          let fetchRequest =
-            NSFetchRequest<User>(entityName: "User")
+        let fetchRequest = NSFetchRequest<User>(entityName: "User")
         
-        fetchRequest.predicate = NSPredicate(format: "username == %@", username)
+        fetchRequest.predicate = NSPredicate(format: "username == %@", username!)
           
           //3
           do {
@@ -127,31 +143,24 @@ class UserController {
         }
     }
     
-    func getPacients(professional : User) -> [User]? {
+    func getPacients(professional : User?) -> [User]? {
         var users : [User] = []
         
-        guard let appDelegate =
-            UIApplication.shared.delegate as? AppDelegate else {
-              return nil
-          }
-          
-          let managedContext =
-            appDelegate.persistentContainer.viewContext
-          
-          //2
-          let fetchRequest =
-            NSFetchRequest<User>(entityName: "User")
+        if professional == nil {
+            return users
+        }
         
-        fetchRequest.predicate = NSPredicate(format: "professional = %@", professional)
+        let fetchRequest = NSFetchRequest<User>(entityName: "User")
+        
+        fetchRequest.predicate = NSPredicate(format: "professional = %@", professional!)
           
-          //3
           do {
             users = try managedContext.fetch(fetchRequest)
           } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
           }
         
-        return users
+            return users
     }
 
 }

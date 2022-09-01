@@ -7,13 +7,20 @@
 
 import UIKit
 
-class LoginController: UIViewController {
+class LoginController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
     }
 
     @IBAction func clickSignUpProfessional(_ sender: Any) {
@@ -36,7 +43,7 @@ class LoginController: UIViewController {
             let uc = UserController()
             let username = usernameTextField.text!
             
-            guard let expectedUser = uc.getUser(username) else {
+            guard let expectedUser = uc?.getUser(username) else {
                 let alert = AlertHandler.getErrorIncorrectUsernamePassword()
                 self.present(alert, animated: true, completion: nil)
                 return

@@ -9,18 +9,25 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
-    let uc = UserController()
     var user : User!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    let uc = UserController()
 
-        guard let username = UserDefaultsManager.getUsername() else {
+    override func viewWillAppear(_ animated: Bool) {
+        
+        if uc == nil {
+            print("FALLO")
+        }
+        
+        guard let appDelegate =
+                UIApplication.shared.delegate as? AppDelegate else {
             return
         }
-        user = uc.getUser(username)!
+        guard let auxUser = appDelegate.getCurrentUser(uc: uc!) else {
+            return
+        }
+        
+        user = auxUser
     }
-    
 
     /*
     // MARK: - Navigation
